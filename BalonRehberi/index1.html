@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Balon Rehberim</title>
+	<style>
+        p {
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+        button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            width: 30%;
+        }
+
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f4f4f4;
+			margin: 0;
+			padding: 0;
+		}
+
+		h1 {
+			text-align: center;
+			padding: 20px;
+			margin-bottom: 30px;
+			color: #333;
+		}
+
+		button {
+			display: inline-block;
+			padding: 15px 30px;
+			margin: 5px;
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			font-size: 18px;
+			cursor: pointer;
+			transition: all 0.3s ease-in-out;
+		}
+
+		button:hover {
+			background-color: #3e8e41;
+		}
+
+		button:focus {
+			outline: none;
+		}
+
+		button#soru22 {
+			background-color: #f44336;
+			font-size: 24px;
+			padding: 20px 40px;
+			margin-top: 50px;
+		}
+
+		button#soru22:hover {
+			background-color: #d32f2f;
+		}
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .box {
+            width: 300px;
+            margin: 10px;
+        }
+	</style>
+</head>
+<body>
+	<h1>Balon Rehberim</h1>
+	<p>Kapadokya Bölgesi için bir soru seçin:</p>
+	<button id="soru1">Kapadokya'da balon turları ne zaman yapılır?</button>
+	<button id="soru2">Balon gezileri ne kadar sürer?</button>
+    <button id="soru3">Balon turları nereden başlar?</button>
+    <button id="soru4">Balon gezileri kaç kişilik gruplar halinde yapılır?</button>
+    <button id="soru5">Kapadokya bölgesindeki peri bacalarının oluşumu nasıl gerçekleşti?</button>
+    <button id="soru6">Kapadokya'nın tarihi hakkında bilgi verebilir misiniz?</button>
+    <button id="soru7">Kapadokya bölgesindeki yeraltı şehirleri hakkında bilgi verebilir misiniz?</button>
+    <button id="soru8">Kapadokya bölgesindeki kiliseler hakkında bilgi verebilir misiniz?</button>
+    <button id="soru9">Kapadokya'nın tarihi yapıları hakkında bilgi verebilir misiniz?</button>
+    <button id="soru10">Kapadokya'nın coğrafi özellikleri hakkında bilgi verebilir misiniz?</button>
+    <button id="soru11">Kapadokya bölgesindeki tarihi yollar hakkında bilgi verebilir misiniz?</button>
+    <button id="soru12">Kapadokya'da yer alan tarihi müzeler hakkında bilgi verebilir misiniz?</button>
+    <button id="soru22">TURA BAŞLA</button>
+	<script src="script.js"></script>
+</body>
+<script>
+    function baslat() {
+        var videoLinki = "./balonn.mp4";
+        var videoIframe = document.createElement("iframe");
+        videoIframe.setAttribute("src", videoLinki);
+        videoIframe.setAttribute("width", "100%");
+        videoIframe.setAttribute("height", "500");
+        videoIframe.setAttribute("frameborder", "0");
+        videoIframe.setAttribute("allowfullscreen", "");
+        var videoDiv = document.createElement("div");
+        videoDiv.appendChild(videoIframe);
+        document.body.appendChild(videoDiv);
+    }
+    var turabasla = document.getElementById("soru22");
+    turabasla.addEventListener("click", baslat);
+</script>
+</html>
+
